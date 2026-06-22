@@ -6,18 +6,32 @@
 
 `mps_creator`는 R&D 센터의 **MPS(Multi-Period Planning)** 문서를 작성·관리하고, 궁극적으로 **자동 작성 agent**로 발전시키는 프로젝트.
 
-**MPS** = 주기별(년간/월간/주간)로 "우리 조직이 해야 할 업무와 달성 방안"을 정리하는 기획 문서. 기간 초에 플래닝, 말에 평가. (현재는 **평가는 제외**, 플래닝에 집중.)
+**MPS** = 주기별(년간/월간/주간)로 "해야 할 업무와 달성 방안"을 정리하는 기획 문서. 기간 초에 플래닝, 말에 평가. (현재는 **평가는 제외**, 플래닝에 집중.)
+
+## 디렉토리 구조 (중요)
+
+```
+MPS/
+├─ references/     # 상위 센터 MPS = '내 MPS' 작성의 입력/참고 자료 (내 것이 아님)
+│   ├─ 3월/ 4월/ 연간/
+└─ created/        # 내 MPS = 실제 산출물 (사용자가 작성)
+```
+
+- `references/`의 MPS는 **상위 센터** 것이다. 이를 입력 삼아 `created/`에 **내 MPS**를 도출한다.
+- **혼동 주의:** `references/`를 "내가 쓴 것"으로 착각하지 말 것.
 
 ## Claude의 역할
 
-- **현재 단계:** 4/5월 월간 MPS를 사용자와 함께 수동으로 완성 (Device / SW / AI 각 조직).
+- **현재 단계:**
+  1. 센터 MPS(`references/`)를 규격화된 MD로 정비
+  2. **내 MPS(`created/`, 4/5월)** 를 사용자와 함께 수동으로 완성
 - MPS 문서는 아래 **규격**을 반드시 따를 것.
-- **한국어**로 작성. Gate 프로세스 용어(PA/EA/ER, Go/Kill/Hold/Recycle, Decision Log 등)는 기존 문서 표현을 유지.
-- 작성 시 기존 3월 문서(`MPS/references/3월/`)를 참고해 맥락(Gate 프로세스, 5월 SIDEX 전시 등)을 이어갈 것.
+- **한국어**로 작성. Gate 프로세스 용어(PA/EA/ER, Go/Kill/Hold/Recycle, Decision Log 등)는 기존 문서 표현 유지.
+- 센터 MPS 변환 시 원본 내용을 충실히 보존하되, 구조는 규격에 맞춘다.
 
 ## MPS 문서 규격
 
-> 규격의 배경·결정 근거는 [`docs/superpowers/specs/2026-06-22-mps-doc-structure-design.md`](docs/superpowers/specs/2026-06-22-mps-doc-structure-design.md) 참조.
+> 규격 배경·결정 근거: [`docs/superpowers/specs/2026-06-22-mps-doc-structure-design.md`](docs/superpowers/specs/2026-06-22-mps-doc-structure-design.md)
 
 ### 카디널리티 (개수 관계) — 핵심
 
@@ -25,7 +39,7 @@
 |------|------|
 | Performance Objectives | **2~3개** |
 | ├─ 고정변수목표 (각 PO 내) | **1개 이상 (복수 가능)** + 각각 공략전략 |
-| ├─ 변동변수목표 (각 PO 내) | **0개 이상 (복수 가능)** + 각각 공략전략 |
+| ├─ 변동변수목표 (각 PO 내) | **1개 이상 (복수 가능)** + 각각 공략전략 |
 | Risk (각 PO 내) | **Performance Objective 당 1개 (1:1)** |
 
 ### 구조 (트리)
@@ -59,9 +73,14 @@
 
 > 변경 시 이 섹션과 [`docs/roadmap.md`](docs/roadmap.md)을 함께 갱신.
 
-- [x] 3월 (Device / SW / AI)
-- [ ] 4월 (Device / SW / AI)
-- [ ] 5월 (Device / SW / AI)
+**센터 MPS (`references/`)**
+- [x] 3월 (MD)
+- [x] 4월 (PDF→MD 변환)
+- [x] 연간 (PDF→MD 변환)
+
+**내 MPS (`created/`)** — 사용자와 함께 설계
+- [ ] 4월 (Device/SW/AI)
+- [ ] 5월 (Device/SW/AI)
 
 ## 분류 축 (유연성)
 
@@ -70,4 +89,4 @@
 
 ## 다음 단계
 
-- 4/5월 MPS 완성 → [`docs/roadmap.md`](docs/roadmap.md) 참조.
+- 내 MPS 4/5월 완성 → [`docs/roadmap.md`](docs/roadmap.md) 참조.
