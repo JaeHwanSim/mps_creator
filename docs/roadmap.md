@@ -13,9 +13,12 @@
 **내 MPS 작성 (`created/`)** — 사용자와 함께 설계
 - [ ] 내 4월 MPS
   - [x] AI
+  - [x] Device
+  - [x] SW
+- [ ] 내 5월 MPS
+  - [x] AI
   - [ ] Device
   - [ ] SW
-- [ ] 내 5월 MPS
 
 ## Phase 2: 데이터/패턴 축적
 
