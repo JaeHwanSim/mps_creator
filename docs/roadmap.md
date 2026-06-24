@@ -17,8 +17,8 @@
   - [x] SW
 - [ ] 내 5월 MPS
   - [x] AI
-  - [ ] Device
-  - [ ] SW
+  - [x] Device
+  - [x] SW
 
 ## Phase 2: 데이터/패턴 축적
 
