@@ -11,6 +11,10 @@
 - [x] 센터 연간 MPS (PDF→MD)
 
 **내 MPS 작성 (`created/`)** — 사용자와 함께 설계
+- [ ] 내 3월 MPS
+  - [x] AI
+  - [x] Device
+  - [x] SW
 - [ ] 내 4월 MPS
   - [x] AI
   - [x] Device

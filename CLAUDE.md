@@ -24,7 +24,7 @@ MPS/
 
 - **현재 단계:**
   1. 센터 MPS(`references/`)를 규격화된 MD로 정비
-  2. **내 MPS(`created/`, 4/5월)** 를 사용자와 함께 수동으로 완성
+  2. **내 MPS(`created/`, 3/4/5월)** 를 사용자와 함께 수동으로 완성
 - MPS 문서는 아래 **규격**을 반드시 따를 것.
 - **한국어**로 작성. Gate 프로세스 용어(PA/EA/ER, Go/Kill/Hold/Recycle, Decision Log 등)는 기존 문서 표현 유지.
 - 센터 MPS 변환 시 원본 내용을 충실히 보존하되, 구조는 규격에 맞춘다.
@@ -48,7 +48,7 @@ MPS/
 # [조직] - 'YY M월 월간 MPS
 > 요약 인용구
 
-## Mission                 (한 줄 요약)
+## Mission
 ## 개요
 ## 목적                      (번호 리스트)
 ## 수요자 요구 사항
@@ -73,8 +73,7 @@ MPS/
 - 각 변수목표(고정/변동) **1개당 공략전략 1개**를 1:1로 매핑.
 - ASCII 다이어그램은 MPS를 text 입력창에 붙여넣을 때 깨지므로 회피.
 - **PO 간 관계·'루프' 서술은 넣지 않는다.** Mission·개요·요약에 "루프 / 대응 루프 / 루프 흐름 / 환류" 같은 상투적 표현을 억지로 넣지 말 것. 각 PO와 산출물 설명만으로 구성. (2026-06-24 사용자 지시)
-- **Mission은 핵심 사명 한 문장(한 줄) 요약.** "이번 달 무엇을 달성할 것인가"만 적고, 배경·맥락·세부 내용은 개요로. Mission과 개요의 중복을 피할 것. (2026-06-24 사용자 지시)
-- **문체는 간결하게.** 개요·요약 등은 장황한 서술을 피하고 핵심만(개요는 2~3문장으로). **As-Is/To-Be는 `## 현재 상태` 섹션에서만** 다루고 개요·본문에서 중복 회피. 어려운 추상 용어("등록 기반 모듈 구조", "인터페이스/계약 명세" 등)보다 일상적 표현 우선.
+- **문체는 간결하게.** Mission·개요·요약 등은 장황한 서술을 피하고 핵심만(개요는 2~3문장으로). **As-Is/To-Be는 `## 현재 상태` 섹션에서만** 다루고 개요·본문에서 중복 회피. 어려운 추상 용어("등록 기반 모듈 구조", "인터페이스/계약 명세" 등)보다 일상적 표현 우선.
 
 ## 진행 상황
 
@@ -86,20 +85,27 @@ MPS/
 - [x] 연간 (PDF→MD 변환)
 
 **내 MPS (`created/`)** — 사용자와 함께 설계
+- [ ] 3월
+  - [x] AI — [`MPS/created/3월/AI - '26 3월 월간 MPS (내 MPS).md`](MPS/created/3월/AI%20-%20%2726%203월%20월간%20MPS%20%28내%20MPS%29.md)
+    - 요약: Goose 기반 AI Agent + JIRA 기반 Gate Process 운영 기준선 확보 (3월 Gate·Agent 기반 → 4월 Copilot Pilot)
+  - [x] SW — [`MPS/created/3월/SW - '26 3월 월간 MPS (내 MPS).md`](MPS/created/3월/SW%20-%20%2726%203월%20월간%20MPS%20%28내%20MPS%29.md)
+    - 요약: Smile Design 2.0 PA 산출물 세트 기준선(SDP/RMP/CMP) + Prototype/Alpha로 기술 리스크 조기 확인 (3월 PA/CMP 기반 → 4월 재현 가능 파이프라인)
+  - [x] Device — [`MPS/created/3월/Device - '26 3월 월간 MPS (내 MPS).md`](MPS/created/3월/Device%20-%20%2726%203월%20월간%20MPS%20%28내%20MPS%29.md)
+    - 요약: EA(설계 승인) Demo System 기구·S/W 디자인 + EA 산출물(SRS/Architecture/SDS+IDL 고정) + Agent 기반 Main Navigation 화면 초기 빌드 (3월 EA → 4월 ER 구현)
 - [ ] 4월
   - [x] AI — [`MPS/created/4월/AI - '26 4월 월간 MPS (내 MPS).md`](MPS/created/4월/AI%20-%20%2726%204월%20월간%20MPS%20%28내%20MPS%29.md)
-    - 요약: Copilot 완성 + Goose Agent 자동화 계층 고도화 + robot 개발·navigation 2과제 Pilot 정착
+    - 핵심 루프(text): 성과 목표 2(robot 개발·navigation Pilot) 현장 피드백 → 성과 목표 1(Goose Agent 고도화) 개선 → 성과 목표 2에 재적용
   - [x] Device — [`MPS/created/4월/Device - '26 4월 월간 MPS (내 MPS).md`](MPS/created/4월/Device%20-%20%2726%204월%20월간%20MPS%20%28내%20MPS%29.md)
-    - 요약: Surgical Robot Implant·트래킹 + Dynamic Navigation SW(좌표 변환·CT Rendering) 구현 기준선 + SIDEX 데모 통합 빌드
+    - 핵심 루프(text): 3월 EA 설계 기준선 → 성과 목표 1(Surgical Robot Implant·트래킹)·성과 목표 2(Dynamic Navigation SW 좌표 변환·CT Rendering) 구현 → SIDEX 데모 통합 빌드 / 리허설·결함 로그 → 보정·재검증
   - [x] SW — [`MPS/created/4월/SW - '26 4월 월간 MPS (내 MPS).md`](MPS/created/4월/SW%20-%20%2726%204월%20월간%20MPS%20%28내%20MPS%29.md)
-    - 요약: CBCT Segmentation·VD Landmark 재현 가능 파이프라인 코드 기준선 + 공통 엔지니어링 기반
+    - 핵심 루프(text): 성과 목표 1(Segmentation 파이프라인) 공통 엔지니어링 기반 → 성과 목표 2(VD Landmark) 재사용·확장 / 평가 harness·QC 결과 → 데이터·기준 보정 → 재평가
 - [ ] 5월
-  - [x] AI — [`MPS/created/5월/AI - '26 5월 월간 MPS (내 MPS).md`](MPS/created/5월/AI%20-%20%2726%205월%20월간%20MPS%20%28내%20MPS%29.md)
-    - 요약: 개발 agent Goose → Claude Code + MCP 교체 + CBCT 뷰어 새 MCP 서버로 MDR 문서 생성·코딩 테스트 풀 테스트 POC
+  - [x] AI — [`MPS/created/5월/AI - '26 5월 월간 MPS (내 MPS).md`](MPS/created/5월/AI%20-%20%2726%205월%20월간%20MPS%20%28내%20MPS1%29.md)
+    - 핵심 루프(text): 4월 Goose v1.0 + Copilot v1.0(Pilot 운영 중) → 성과 목표 1(Claude Code 기반 Agent 런타임 v2.0 + MCP 등록 구조 v2.0) 정비, Pilot 2과제 무중단 이관 → 성과 목표 2(CBCT 뷰어 신규 Agent MCP 서버 v0.7)가 MCP 등록 구조 첫 적용, MDR 문서 생성 + 코딩 테스트 풀 테스트 POC → POC 결과/피드백이 PO1 개선·추가 MCP 서버 후보로 환류
   - [x] Device — [`MPS/created/5월/Device - '26 5월 월간 MPS (내 MPS).md`](MPS/created/5월/Device%20-%20%2726%205월%20월간%20MPS%20%28내%20MPS%29.md)
     - 요약: Robot Tracking 안정성·정밀도 고도화 + Wearable Navigation UI 업데이트 + SIDEX 전시 당월 현장 데모 운영
   - [x] SW — [`MPS/created/5월/SW - '26 5월 월간 MPS (내 MPS).md`](MPS/created/5월/SW%20-%20%2726%205월%20월간%20MPS%20%28내%20MPS%29.md)
-    - 요약: CBCT 분석 AI 고도화(segmentation·landmark) + 기준점 기반 평면(정중면·FH) 추정 + 무치악 교합평면 추정 + condyle 기반 가상 교합운동 시뮬레이션
+    - 핵심 루프(text): 4월 파이프라인 기준선 → 성과 목표 1(segmentation·landmark 고도화 + 기준점 기반 평면(정중면·FH) 추정) → 성과 목표 2(무치악 교합평면 추정 + condyle 기반 가상 교합운동 시뮬레이션) → 검증·민감도 결과가 모델·평면 보정으로 환류
 
 ## 분류 축 (유연성)
 
@@ -108,4 +114,4 @@ MPS/
 
 ## 다음 단계
 
-- 내 MPS 4/5월 완성 → [`docs/roadmap.md`](docs/roadmap.md) 참조.
+- 내 MPS 3/4/5월 완성 → [`docs/roadmap.md`](docs/roadmap.md) 참조.
